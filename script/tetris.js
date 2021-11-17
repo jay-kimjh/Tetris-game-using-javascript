@@ -61,7 +61,7 @@ function renderBlocks(moveType = "") {
             setTimeout(() => {
                 renderBlocks();
                 if(moveType === "top"){
-                    seizeBlock();
+                    seizeBlock()
                 }
             },0)
             return true;
@@ -78,11 +78,11 @@ function seizeBlock(){
         moving.classList.remove("moving");
         moving.classList.add("seized");
     })
-    generateNewBlock();
+    generateNewBlock()
 }
 function generateNewBlock(){
     const blcokArray = Object.entries(BLOCKS);
-    const randomIndex = Math.floor(Math.random() * blockArray.length);
+    const randomIndex = Math.floor(Math.random() * blockArray.length)
     movingItem.type = blockArray[randomIndex][0];
     movingItem.top = 0;
     movingItem.left = 3;
