@@ -25,7 +25,6 @@ init()
 // functions
 function init() {
     tempMovingItem = { ...movingItem };
-    
     for (let i = 0; i < GAME_ROWS; i++) {
         prependNewLine()
     }
@@ -81,7 +80,7 @@ function seizeBlock(){
     generateNewBlock()
 }
 function generateNewBlock(){
-    const blcokArray = Object.entries(BLOCKS);
+    const blockArray = Object.entries(BLOCKS);
     const randomIndex = Math.floor(Math.random() * blockArray.length)
     movingItem.type = blockArray[randomIndex][0];
     movingItem.top = 0;
