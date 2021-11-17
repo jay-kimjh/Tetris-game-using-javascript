@@ -1,4 +1,4 @@
-import BLOCKS from "./blocks.js"
+import BLOCKS from "./blocks.js";
 
 // DOM
 const playground = document.querySelector(".playground > ul");
@@ -81,6 +81,10 @@ function seizeBlock(){
     generateNewBlock()
 }
 function generateNewBlock(){
+    const blcokArray = Object.entries(BLOCKS);
+    const randomIndex = Math.floor(Math.random() * blockArray.length);
+    console.log();
+    movingItem.type = blockArray[randomIndex][0];
     movingItem.top = 0;
     movingItem.left = 3;
     movingItem.direction = 0;
