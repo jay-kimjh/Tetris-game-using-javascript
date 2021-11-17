@@ -79,9 +79,10 @@ function seizeBlock(){
     });
     generateNewBlock()
 }
+
 function generateNewBlock(){
     const blockArray = Object.entries(BLOCKS);
-    const randomIndex = Math.floor(Math.random() * blockArray.length)
+    const randomIndex = Math.floor(Math.random()*blockArray.length)
     movingItem.type = blockArray[randomIndex][0]
     movingItem.top = 0;
     movingItem.left = 3;
