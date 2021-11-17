@@ -61,7 +61,7 @@ function renderBlocks(moveType = "") {
             setTimeout(() => {
                 renderBlocks();
                 if(moveType === "top"){
-                    seizeBlock()
+                    seizeBlock();
                 }
             },0)
             return true;
@@ -78,7 +78,7 @@ function seizeBlock(){
         moving.classList.remove("moving");
         moving.classList.add("seized");
     })
-    generateNewBlock()
+    generateNewBlock();
 }
 function generateNewBlock(){
     const blcokArray = Object.entries(BLOCKS);
