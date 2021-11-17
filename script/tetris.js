@@ -60,12 +60,12 @@ function renderBlocks(moveType = "") {
             setTimeout(() => {
                 renderBlocks();
                 if(moveType === "top"){
-                    seizeBlock()
+                    seizeBlock();
                 }
             },0)
             return true;
         }
-    })
+    });
     movingItem.left = left;
     movingItem.top = top;
     movingItem.direction = direction;
@@ -76,12 +76,12 @@ function seizeBlock(){
     movingBlocks.forEach(moving => {
         moving.classList.remove("moving");
         moving.classList.add("seized");
-    })
-    generateNewBlock()
+    });
+    generateNewBlock();
 }
 function generateNewBlock(){
     const blockArray = Object.entries(BLOCKS);
-    const randomIndex = Math.floor(Math.random() * blockArray.length)
+    const randomIndex = Math.floor(Math.random() * blockArray.length);
     movingItem.type = blockArray[randomIndex][0];
     movingItem.top = 0;
     movingItem.left = 3;
