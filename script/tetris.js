@@ -2,7 +2,7 @@ import BLOCKS from "./blocks.js";
 
 // DOM
 const playground = document.querySelector(".playground > ul");
-const gaemText = document.querySelector(".game-text");
+const gameText = document.querySelector(".game-text");
 const scoreDisplay = document.querySelector(".score");
 const restartButton = document.querySelector(".game-text > button");
 
@@ -181,6 +181,6 @@ document.addEventListener("keydown", e => {
 
 restartButton.addEventListener("click",()=>{
     playground.innerHTML = "";
-    gaemText.style.display = "none"
+    gameText.style.display = "none"
     init()
 })
