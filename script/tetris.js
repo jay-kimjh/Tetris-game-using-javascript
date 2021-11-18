@@ -179,7 +179,7 @@ document.addEventListener("keydown", e => {
 })
 
 
-restartButton.addEventListener("click",()=>{
+restartButton.addEventListener("click", () => {
     playground.innerHTML = "";
     gameText.style.display = "none"
     init()
